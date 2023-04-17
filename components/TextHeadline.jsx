@@ -15,7 +15,9 @@ const TextHeadline = ({ title, textColor = "#1FC77E", size }) => {
 
   return (
     <h1
-      className={`text-4xl font-medium mb-8 ${size === "sm" && "text-[26px]"}`}
+      className={`text-4xl md:text-5xl font-medium ${
+        size === "sm" && "text-[26px]"
+      }`}
       dangerouslySetInnerHTML={{ __html: newText }}
     />
   );

@@ -15,16 +15,15 @@ const Menu = ({ handleOpen, isOpen }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="
-      overflow-y-auto
-      z-10
+    overflow-y-auto
+    z-50
     absolute
     left-0
     top-0
     h-full
     bg-dark-blue
     w-full
-    lg:hidden
-    "
+      "
         >
           <div
             className="

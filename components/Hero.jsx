@@ -1,20 +1,21 @@
-import React from "react";
+"use client";
+
 import Button from "../components/Button";
 import Image from "next/image";
 import Circle from "../public/Illustration.svg";
-import People from "../public/mask.png";
-import { HiArrowUpLeft } from "react-icons/hi2";
+import HeaderIllustration from "../public/Header Illustration.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col-reverse">
+    <section className="flex items-center justify-between">
       <div>
-        <div className="relative my-8">
-          <h1 className="text-4xl font-medium z-10">
+        <div className="relative my-8 lg:mt-10">
+          <h1 className="text-4xl font-medium z-10 md:text-[80px] md:leading-none">
             Bring the power <br /> of AI to your <br /> conversations
           </h1>
           <Image
-            className="absolute left-0 -bottom-3 -z-10"
+            className="absolute left-0 -bottom-3 -z-10 md:w-[555px] md:-bottom-7"
             src={Circle}
             alt="Illustration"
           />
@@ -24,24 +25,31 @@ const Hero = () => {
           Work Faster, Smarter, and Better Together
         </h2>
 
-        <p className="text-base my-3 mb-4">
-          Experience the power of AI language models with OmniGPT. Our chat
-          platform provides seamless communication across multiple channels.
+        <p className="font-light my-3 mb-6">
+          Experience the power of AI language models with OmniGPT. <br /> Our
+          chat platform provides seamless communication <br /> across multiple
+          channels.
         </p>
-        <h2 className="text-xl font-medium mb-5">
+        {/* <h2 className="text-xl font-medium mb-5">
           Try the OmniGPT for free. 15-day trial, no credit card required.
-        </h2>
+        </h2> */}
 
         <div className="mb-10">
-          <Button title="Start your free trial" />
+          <Button title="Start your free trial" type={"primary"} />
         </div>
       </div>
-      {/* <div className="flex items-end justify-evenly">
-        <Image className="flex-grow" width={"100%"} src={People} alt="People" />
-        <span className="flex items-center justify-center h-14 w-14 bg-[#7F3DD2] rounded-full">
-          <HiArrowUpLeft size={35} />
-        </span>
-      </div> */}
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <Image
+          className="hidden ml-10 w-[650px] h-full lg:block"
+          src={HeaderIllustration}
+          alt="Header Illustration"
+        />
+      </motion.div>
     </section>
   );
 };

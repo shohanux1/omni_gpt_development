@@ -7,7 +7,11 @@ import Avatar from "../../public/Wallpaper.png";
 const ReviewCard = () => {
   return (
     <div className="bg-[#414651] p-8 rounded-md">
-      <div>
+      <div className="flex items-center gap-2">
+        <HiStar color="#FADB14" size={25} />
+        <HiStar color="#FADB14" size={25} />
+        <HiStar color="#FADB14" size={25} />
+        <HiStar color="#FADB14" size={25} />
         <HiStar color="#FADB14" size={25} />
       </div>
 

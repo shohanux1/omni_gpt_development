@@ -12,6 +12,8 @@ import MenuLink from "./MenuLink";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  console.log(isOpen);
+
   const handleOpen = () => {
     setIsOpen((prev) => !prev);
   };
@@ -30,9 +32,8 @@ const Navbar = () => {
       <div className="hidden space-x-16 text-[18px] lg:block">
         <MenuLink title="Home" href="/home" />
         <MenuLink title="Contact" href="/contact" />
-        <MenuLink title="Sign In" href="/signin" />
+        <MenuLink title="Home" href="/home" />
       </div>
-
       <Menu handleOpen={handleOpen} isOpen={isOpen} />
 
       <HiBars3

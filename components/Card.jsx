@@ -1,9 +1,10 @@
 import React from "react";
+import { motion, useScroll } from "framer-motion";
 
-const Card = ({ title, desc, sm }) => {
+const Card = ({ title, desc, sm, icon: Icon }) => {
   return (
-    <div
-      className={`text-black px-5 py-6 rounded-md ${
+    <motion.div
+      className={`text-black px-5 py-8 rounded-md md:flex md:items-center md:gap-6 ${
         sm ? "bg-gray" : "bg-white"
       }`}
     >
@@ -14,8 +15,12 @@ const Card = ({ title, desc, sm }) => {
         {desc && <p className="text-[18px] mt-4">{desc}</p>}
       </div>
 
-      {/* {For Icon} */}
-    </div>
+      {Icon && (
+        <div className="hidden bg-primary-light p-4 text-white rounded-md text-7xl md:block lg:block">
+          {Icon}
+        </div>
+      )}
+    </motion.div>
   );
 };
 
